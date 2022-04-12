@@ -1,0 +1,424 @@
+/*ALL_SETTINGS*/
+
+.title_all {
+    font-size: 60px;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: auto;
+    width: 380px;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    background-color: darkred;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.description {
+    display: none;
+    width: 365px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description_hid {
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/*1 - Создать на странице div, указать ему id, сделать ему такие стили,
+чтоб он выглядел как черный квадрат 100х100 пх. Добавить на страницу кнопку,
+по клику на эту кнопку блок должен исчезать. Исчезание нужно сделать всеми
+тремя способами (отдельная кнопка под каждый способ):
+
+1) CSS (display: none), т.е. просто навесить стиль на элемент
+2) JS (удаление элемента)
+3) CSS+JS (навешивать на элемент класс hidden,
+а в CSS прописать такие стили чтоб они скрывали всё с классом hidden)*/
+
+#square-1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin-top: 25px;
+}
+
+#all-1 {
+    margin-top: 50px;
+    width: 365px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*2 - Сделать так, чтоб по клику на кнопку блок исчезал,
+если он есть, и чтоб появлялся, если он был скрыт (способ CSS+JS)*/
+
+#square-2 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 25px;
+}
+
+#all-2 {
+    width: 365px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*3 - Сделать на странице 5 таких блоков,
+дать им всем одинаковый класс, благодаря которому
+они все станут выглядеть как черные квадраты.
+Сделать так чтоб они все одновременно скрывались/появлялись
+по нажатию на кнопку*/
+
+#square-3 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    display: block;
+}
+
+#all-3 {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 100px;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+}
+
+#btn-3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+/*4 - Добавить на страницу инпут, в который можно ввести css selector
+(query selector) и при нажатии на кнопку будут скрываться/появляться
+те элементы, которые соответствуют этому селектору*/
+
+#square-4 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+#all-4 {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+#input-4 {
+    margin-top: 50px;
+    margin-left: 550px;
+}
+
+/*5 - Добавить на страницу желтый квадрат, и сделать так
+чтоб при нажатии на него в первый раз выводилась надпись
+"Привет" (alert), а при втором нажатии этот квадрат пропадал.
+(нужно менять функцию обработчик, удалять первую и ставить вторую)*/
+
+#square-5 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*6 - Добавить на страницу красный
+квадрат 50х50 пх, который будет появляться
+как только человек наводит курсор на кнопку,
+и скрываться как только человек убирает курсор с кнопки*/
+
+#square-6 {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    margin-top: 15px;
+}
+#btn-6 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+/*7 - Добавить на страницу зеленый прямоугольник 50х20 пх,
+который будет появляться как только человек фокусируется
+на инпуте и исчезать как только человек начинает писать
+текст в этот инпут*/
+
+#rectangle-7 {
+    background-color: green;
+    width: 50px;
+    height: 20px;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+#input-7 {
+    margin-top: 50px;
+    margin-left: 550px;
+}
+
+/*8 - Добавить на страницу инпут и кнопку.
+Если в инпут положить ссылку, и нажать
+на кнопку то на странице появится картинка
+полученная по ссылке, которую ввели в инпут*/
+
+.all-8 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 365px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.all_2-8 {
+    display: flex;
+    justify-content: center;
+}
+
+/*9 - Превратить инпут в textarea, в которую можно
+вводить ссылки, каждую с новой строчки. При нажатии
+на кнопку на странице появится столько картинок,
+сколько ссылок ввели в textarea
+(картинки берутся по ссылкам)*/
+
+#textarea-9 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 365px;
+    display: flex;
+    justify-content: center;
+}
+#btn-9 {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 15px;
+}
+#all_img-9 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 365px;
+}
+
+/*10 - Сделать блок в правом верхнем углу страницы,
+в котором в формате "Х: 123, У: 984" будут
+выводиться координаты курсора
+(обновляться в риалтайме)*/
+
+#square-10 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#txt-10 {
+    margin-top: 20px;
+}
+
+/*11 - Добавить в блок в правом верхнем углу информацию
+о том какой язык выбран в браузере у пользователя*/
+
+#text-11 {
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: 25px;
+    width: 50px;
+    font-size: 46px;
+}
+
+/*12 - Добавить в блок в правом верхнем углу отображение
+широты и долготы на которой находится человек
+(формат: "Ш: 34.23234, Д: 78.239482034")*/
+
+#txt-12 {
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: 25px;
+    width: 350px;
+    font-size: 46px;
+}
+
+/*13 - Добавить на страницу три блока и сделать текст
+внутри них редактируемым, как в инпуте (но чтоб
+это был не нативный инпут). То, что человек введет
+в эти "инпуты" должно в них и оставаться при
+перезагрузке страницы (onload событие).
+    для первого использовать localStorage
+    для второго использовать cookies
+    для третьего использовать sessionStorage
+Загуглите в чем разница между этими способами*/
+
+.inp-13 {
+    width: 200px;
+    background-color: rgb(206, 146, 56);
+    height: 25px;
+    margin-bottom: 20px;
+    border: none;
+}
+.all-13 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+/*14 - Сделать кнопку, которая появляется
+когда мы уже пролистали экран вниз и по
+нажатию на которую человека плавно кидает
+наверх страницы*/
+
+#but-14 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*15 - Сделать два блока, один внутри другого.
+Навешать на каждый из них слушатель клика,
+который вызывает алерт. Сделать так чтоб при
+нажатии на маленький вызывался всего один алерт*/
+
+#div1-15{
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid  rgb(255, 0, 51);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#div2-15{
+    border: 5px solid  rgb(0, 0, 0);
+    width: 100px;
+    height: 100px;
+}
+
+/*16 - Сделать кнопку, по нажатию на которую
+появляется серый полупрозрачный квадрат на весь
+экран и нельзя было скроллить страницу пока он не
+скроется. Скрывать квадрат по нажатию на него*/
+
+#div_all-16{
+    height: 1000px;
+    background-color: rgba(121, 121, 121, 0.5);
+    display: none;
+}
+#btn-16 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*17 - Дано: <form><input type="submit"
+value="GO"></form>Сделать так чтоб при нажатии
+на кнопку "GO" не перезагружалась страница*/
+
+#submit-17 {
+    margin-left: auto;
+    margin-right: auto;         
+    display: block;
+}
+
+/*18 - Сделать красивый инпут type="file".
+Сделать чтоб при перетаскивании файла на этот
+инпут, он красиво менялся (drag-n-drop).
+Ну и когда файл уже выбран тоже*/
+
+#all_div-18 {
+    width: 750px;
+    height: 450px;
+    border-radius: 10px;
+    border: 3px dashed #808080;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+#img_dow-18 {
+    width: 176px;
+    height: 156px;
+}
+.txt_dow-18 {
+    margin-top: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color:#1e191a;
+    font-weight: bolder;
+}
+.txt_des_dow-18 {
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    color: #808080;
+    margin-bottom: -10px;
+}
+#btn-18 {
+    margin-top: 30px;
+    max-width: 290px;
+    height: 45px;
+    background: #1e191a;
+    color: #fff;
+    font-size: 1.150rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+}
+#div_img-18 {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}

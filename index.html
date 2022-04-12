@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>global all_task</title>
+</head>
+<body>
+    <!--1 - Создать на странице div, указать ему id, сделать ему такие стили,
+    чтоб он выглядел как черный квадрат 100х100 пх. Добавить на страницу кнопку,
+    по клику на эту кнопку блок должен исчезать. Исчезание нужно сделать всеми
+    тремя способами (отдельная кнопка под каждый способ):
+        1) CSS (display: none), т.е. просто навесить стиль на элемент
+        2) JS (удаление элемента)
+        3) CSS+JS (навешивать на элемент класс hidden,
+        а в CSS прописать такие стили чтоб они скрывали всё с классом hidden)-->
+    <p class="title_all">1 ЗАДАНИЕ</p>
+    <div id="all-1">
+        <div class="group_btn-1">
+            <button id="btn_1-1">1 method (CSS)</button>
+            <button id="btn_2-1">2 method (JS)</button>
+            <button id="btn_3-1">3 method (CSS + JS)</button>
+        </div>
+        <div id="square-1"></div>
+    </div>
+    <button class="description_hid" id="description_hid-1">Посмотреть описание задания...</button>
+    <p class="description" id="description-1">Создать на странице div, указать ему id, сделать ему такие стили,
+        чтоб он выглядел как черный квадрат 100х100 пх. Добавить на страницу кнопку,
+        по клику на эту кнопку блок должен исчезать. Исчезание нужно сделать всеми
+        тремя способами (отдельная кнопка под каждый способ):
+            1) CSS (display: none), т.е. просто навесить стиль на элемент
+            2) JS (удаление элемента)
+            3) CSS+JS (навешивать на элемент класс hidden,
+            а в CSS прописать такие стили чтоб они скрывали всё с классом hidden)
+    </p>
+    <!--2 - Сделать так, чтоб по клику на кнопку блок исчезал,
+    если он есть, и чтоб появлялся, если он был скрыт (способ CSS+JS)-->
+    <p class="title_all">2 ЗАДАНИЕ</p>
+    <div id="all-2">
+        <div id="square-2"></div>
+        <button id="btn-2">hidden button</button>
+    </div>
+    <button class="description_hid" id="description_hid-2">Посмотреть описание задания...</button>
+    <p class="description" id="description-2">Сделать так, чтоб по клику на кнопку блок исчезал,
+        если он есть, и чтоб появлялся, если он был скрыт (способ CSS+JS)
+    </p>
+    <!--3 - Сделать на странице 5 таких блоков,
+    дать им всем одинаковый класс, благодаря которому
+    они все станут выглядеть как черные квадраты.
+    Сделать так чтоб они все одновременно скрывались/появлялись
+    по нажатию на кнопку-->
+    <p class="title_all">3 ЗАДАНИЕ</p>
+    <div id="all-3">
+        <div id="square-3"></div>
+        <div id="square-3"></div>
+        <div id="square-3"></div>
+        <div id="square-3"></div>
+        <div id="square-3"></div>
+    </div>
+    <button id="btn-3">hidden all button</button>
+    <button class="description_hid" id="description_hid-3">Посмотреть описание задания...</button>
+    <p class="description" id="description-3">Сделать на странице 5 таких блоков,
+        дать им всем одинаковый класс, благодаря которому
+        они все станут выглядеть как черные квадраты.
+        Сделать так чтоб они все одновременно скрывались/появлялись
+        по нажатию на кнопку
+    </p>
+    <!--4 - Добавить на страницу инпут, в который можно ввести css selector
+    (query selector) и при нажатии на кнопку будут скрываться/появляться
+    те элементы, которые соответствуют этому селектору-->
+    <p class="title_all">4 ЗАДАНИЕ</p>
+    <div id="all-4">
+        <div id="square-4" class="square1"><p>square1</p></div>
+        <div id="square-4" class="square2"><p>square2</p></div>
+        <div id="square-4" class="square3"><p>square3</p></div>
+        <div id="square-4" class="square4"><p>square4</p></div>
+        <div id="square-4" class="square5"><p>square5</p></div>
+    </div>
+    <input id="input-4" name="search_selector">
+    <button id="btn-4">hidden selector</button>
+    <button class="description_hid" id="description_hid-4">Посмотреть описание задания...</button>
+    <p class="description" id="description-4">Сделать на странице 5 таких блоков,
+        дать им всем одинаковый класс, благодаря которому
+        они все станут выглядеть как черные квадраты.
+        Сделать так чтоб они все одновременно скрывались/появлялись
+        по нажатию на кнопку
+    </p>
+    <!--5 - Добавить на страницу желтый квадрат, и сделать так
+    чтоб при нажатии на него в первый раз выводилась надпись
+    "Привет" (alert), а при втором нажатии этот квадрат пропадал.
+    (нужно менять функцию обработчик, удалять первую и ставить вторую)-->
+    <p class="title_all">5 ЗАДАНИЕ</p>
+    <div id="square-5"></div>
+    <button class="description_hid" id="description_hid-5">Посмотреть описание задания...</button>
+    <p class="description" id="description-5">Сделать на странице 5 таких блоков,
+        дать им всем одинаковый класс, благодаря которому
+        они все станут выглядеть как черные квадраты.
+        Сделать так чтоб они все одновременно скрывались/появлялись
+        по нажатию на кнопку
+    </p>
+    <!--6 - Добавить на страницу красный
+    квадрат 50х50 пх, который будет появляться
+    как только человек наводит курсор на кнопку,
+    и скрываться как только человек убирает курсор с кнопки-->
+    <p class="title_all">6 ЗАДАНИЕ</p>
+    <button id="btn-6">hidden button</button>
+    <div id="square-6"></div>
+    <button class="description_hid" id="description_hid-6">Посмотреть описание задания...</button>
+    <p class="description" id="description-6">Добавить на страницу красный
+        квадрат 50х50 пх, который будет появляться
+        как только человек наводит курсор на кнопку,
+        и скрываться как только человек убирает курсор с кнопки
+    </p>
+    <!--7 - Добавить на страницу зеленый прямоугольник 50х20 пх,
+    который будет появляться как только человек фокусируется
+    на инпуте и исчезать как только человек начинает писать
+    текст в этот инпут-->
+    <p class="title_all">7 ЗАДАНИЕ</p>
+    <div id="rectangle-7"></div>
+    <input id="input-7" type="text" name="input">
+    <button class="description_hid" id="description_hid-7">Посмотреть описание задания...</button>
+    <p class="description" id="description-7">Добавить на страницу зеленый прямоугольник 50х20 пх,
+        который будет появляться как только человек фокусируется
+        на инпуте и исчезать как только человек начинает писать
+        текст в этот инпут
+    </p>
+    <!--8 - Добавить на страницу инпут и кнопку.
+    Если в инпут положить ссылку, и нажать
+    на кнопку то на странице появится картинка
+    полученная по ссылке, которую ввели в инпут-->
+    <p class="title_all">8 ЗАДАНИЕ</p>
+    <div class="all-8">
+        <img id="img_href-8" src="">
+        <div class="all_2-8">
+            <button id="open-8">open URL</button>
+            <input id="input-8" name="input">
+        </div>
+    </div>
+    <button class="description_hid" id="description_hid-8">Посмотреть описание задания...</button>
+    <p class="description" id="description-8">Добавить на страницу инпут и кнопку.
+        Если в инпут положить ссылку, и нажать
+        на кнопку то на странице появится картинка
+        полученная по ссылке, которую ввели в инпут
+    </p>
+    <!--9 - Превратить инпут в textarea, в которую можно
+    вводить ссылки, каждую с новой строчки. При нажатии
+    на кнопку на странице появится столько картинок,
+    сколько ссылок ввели в textarea
+    (картинки берутся по ссылкам)-->
+    <p class="title_all">9 ЗАДАНИЕ</p>
+    <textarea rows="6" id="textarea-9"></textarea>
+    <button id="btn-9">open URL image</button>
+    <div id="all_img-9"></div>
+    <button class="description_hid" id="description_hid-9">Посмотреть описание задания...</button>
+    <p class="description" id="description-9">Превратить инпут в textarea, в которую можно
+        вводить ссылки, каждую с новой строчки. При нажатии
+        на кнопку на странице появится столько картинок,
+        сколько ссылок ввели в textarea
+        (картинки берутся по ссылкам)
+    </p>
+    <!--10 - Сделать блок в правом верхнем углу страницы,
+    в котором в формате "Х: 123, У: 984" будут
+    выводиться координаты курсора
+    (обновляться в риалтайме)-->
+    <p class="title_all">10 ЗАДАНИЕ</p>
+    <div id="square-10">
+        <p id="txt-10"></p>
+    </div>
+    <button class="description_hid" id="description_hid-10">Посмотреть описание задания...</button>
+    <p class="description" id="description-10">Сделать блок в правом верхнем углу страницы,
+        в котором в формате "Х: 123, У: 984" будут
+        выводиться координаты курсора
+        (обновляться в риалтайме)
+    </p>
+    <!--11 - Добавить в блок в правом верхнем углу информацию
+    о том какой язык выбран в браузере у пользователя-->
+    <p class="title_all">11 ЗАДАНИЕ</p>
+    <p id="text-11"></p>
+    <button class="description_hid" id="description_hid-11">Посмотреть описание задания...</button>
+    <p class="description" id="description-11">Добавить в блок в правом верхнем углу информацию
+        о том какой язык выбран в браузере у пользователя
+    </p>
+    <!--12 - Добавить в блок в правом верхнем углу отображение
+    широты и долготы на которой находится человек
+    (формат: "Ш: 34.23234, Д: 78.239482034")-->
+    <p class="title_all">12 ЗАДАНИЕ</p>
+    <p id="txt-12"></p>
+    <button class="description_hid" id="description_hid-12">Посмотреть описание задания...</button>
+    <p class="description" id="description-12">Добавить в блок в правом верхнем углу отображение
+        широты и долготы на которой находится человек
+        (формат: "Ш: 34.23234, Д: 78.239482034")
+    </p>
+    <!--Добавить на страницу три блока и сделать текст
+    внутри них редактируемым, как в инпуте (но чтоб
+    это был не нативный инпут). То, что человек введет
+    в эти "инпуты" должно в них и оставаться при
+    перезагрузке страницы (onload событие).
+        для первого использовать localStorage
+        для второго использовать cookies
+        для третьего использовать sessionStorage
+    Загуглите в чем разница между этими способами-->
+    <p class="title_all">13 ЗАДАНИЕ</p>
+    <div class="all-13">
+        <div class="inp-13" id="input_1-13" contenteditable="true"></div>
+        <input class="inp-13" id="input_2-13">
+        <div class="inp-13" id="input_3-13" contenteditable="true"></div>
+        <p>It's just that cookies don't work))) Here's a link not a server, where everything is ok</p>
+        <a href="https://miksam1-2-1-13.netlify.app/1-2-1-13">LINK</a>
+    </div>
+    <button class="description_hid" id="description_hid-13">Посмотреть описание задания...</button>
+    <p class="description" id="description-13">Добавить на страницу три блока и сделать текст
+        внутри них редактируемым, как в инпуте (но чтоб
+        это был не нативный инпут). То, что человек введет
+        в эти "инпуты" должно в них и оставаться при
+        перезагрузке страницы (onload событие).
+        <br>1) для первого использовать localStorage
+        <br>2) для второго использовать cookies
+        <br>3) для третьего использовать sessionStorage
+        Загуглите в чем разница между этими способами
+    </p>
+    <!--14 - Сделать кнопку, которая появляется
+    когда мы уже пролистали экран вниз и по
+    нажатию на которую человека плавно кидает
+    наверх страницы-->
+    <p class="title_all">14 ЗАДАНИЕ</p>
+    <button id="but-14">UP!</button>
+    <button class="description_hid" id="description_hid-14">Посмотреть описание задания...</button>
+    <p class="description" id="description-14">Сделать кнопку, которая появляется
+    когда мы уже пролистали экран вниз и по
+    нажатию на которую человека плавно кидает
+    наверх страницы
+    </p>
+    <!--15 - Сделать два блока, один внутри другого.
+    Навешать на каждый из них слушатель клика,
+    который вызывает алерт. Сделать так чтоб при
+    нажатии на маленький вызывался всего один алерт-->
+    <p class="title_all">15 ЗАДАНИЕ</p>
+    <div id="div1-15">
+        <div id="div2-15"></div>
+    </div>
+    <button class="description_hid" id="description_hid-15">Посмотреть описание задания...</button>
+    <p class="description" id="description-15">Сделать два блока, один внутри другого.
+    Навешать на каждый из них слушатель клика,
+    который вызывает алерт. Сделать так чтоб при
+    нажатии на маленький вызывался всего один алерт
+    </p>
+    <!--16 - Сделать кнопку, по нажатию на которую
+    появляется серый полупрозрачный квадрат на весь
+    экран и нельзя было скроллить страницу пока он не
+    скроется. Скрывать квадрат по нажатию на него-->
+    <p class="title_all">16 ЗАДАНИЕ</p>
+    <button id="btn-16">block div</button>
+    <div id="div_all-16"></div>
+    <button class="description_hid" id="description_hid-16">Посмотреть описание задания...</button>
+    <p class="description" id="description-16">Сделать кнопку, по нажатию на которую
+    появляется серый полупрозрачный квадрат на весь
+    экран и нельзя было скроллить страницу пока он не
+    скроется. Скрывать квадрат по нажатию на него
+    </p>
+    <!--17 - Дано: <form><input type="submit"
+    value="GO"></form>Сделать так чтоб при нажатии
+    на кнопку "GO" не перезагружалась страница-->
+    <p class="title_all">17 ЗАДАНИЕ</p>
+    <form>
+        <input type="submit" id="submit-17" value="GO">
+    </form>
+    <button class="description_hid" id="description_hid-17">Посмотреть описание задания...</button>
+    <p class="description" id="description-17">Дано: &ltform&gt&ltinput type="submit"
+    value="GO"&gt&lt/form&gtСделать так чтоб при нажатии
+    на кнопку "GO" не перезагружалась страница
+    </p>
+    <!--18 - Сделать красивый инпут type="file".
+    Сделать чтоб при перетаскивании файла на этот
+    инпут, он красиво менялся (drag-n-drop).
+    Ну и когда файл уже выбран тоже-->
+    <p class="title_all">18 ЗАДАНИЕ</p>
+    <div id="all_div-18">
+        <input id="input-18" type="file">
+        <img id="img_dow-18" src="download-18.png">
+        <p class="txt_dow-18">Загрузка файлов</p>
+        <p class="txt_des_dow-18">Перетащите файл в область с пунктиром!</p>
+        <p class="txt_des_dow-18">ИЛИ</p>
+        <button id="btn-18">Загрузить файл</button>
+    </div>
+    <div id="div_img-18"></div>
+    <button class="description_hid" id="description_hid-18">Посмотреть описание задания...</button>
+    <p class="description" id="description-18">Сделать красивый инпут type="file".
+    Сделать чтоб при перетаскивании файла на этот
+    инпут, он красиво менялся (drag-n-drop).
+    Ну и когда файл уже выбран тоже
+    </p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
