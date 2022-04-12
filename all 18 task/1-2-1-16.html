@@ -1,0 +1,89 @@
+<!--16 - Сделать кнопку, по нажатию на которую
+    появляется серый полупрозрачный квадрат на весь
+    экран и нельзя было скроллить страницу пока он не
+    скроется. Скрывать квадрат по нажатию на него-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2-1-16</title>
+    <style>
+        #div_all{
+            height: 1000px;
+            background-color: rgba(121, 121, 121, 0.5);
+            display: none;
+        }
+        #btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .title_all {
+            font-size: 60px;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            width: 380px;
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+        button {
+            background-color: darkred;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+        .description {
+            display: none;
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .description_hid {
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <p class="title_all">16 ЗАДАНИЕ</p>
+    <button id="btn">block div</button>
+    <div id="div_all"></div>
+    <button class="description_hid" id="description_hid">Посмотреть описание задания...</button>
+    <p class="description" id="description">Сделать кнопку, по нажатию на которую
+появляется серый полупрозрачный квадрат на весь
+экран и нельзя было скроллить страницу пока он не
+скроется. Скрывать квадрат по нажатию на него
+    </p>
+    <script>
+        const body = document.getElementsByTagName("BODY")[0];
+        const div_all = document.getElementById("div_all");
+        const btn = document.getElementById("btn")
+
+        btn.addEventListener('click', function() {
+            div_all.style.display = 'block';
+            body.style.overflow = 'hidden';
+        })
+        div_all.addEventListener('click', function() {
+            div_all.style.display = 'none';
+            body.style.overflow = 'scroll';
+        })
+
+        document.getElementById("description_hid").onclick = function(){
+            const des = document.getElementById("description");
+            if(des.style.display == "none") {
+                des.style.display = "block";
+            }
+            else {
+                des.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

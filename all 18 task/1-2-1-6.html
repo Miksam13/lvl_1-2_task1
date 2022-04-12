@@ -1,0 +1,90 @@
+<!--Добавить на страницу красный
+    квадрат 50х50 пх, который будет появляться
+    как только человек наводит курсор на кнопку,
+    и скрываться как только человек убирает курсор с кнопки-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2-1-6</title>
+    <style>
+        #square {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin-left: auto;
+            margin-right: auto;
+            display: none;
+            margin-top: 15px;
+        }
+        #btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+        .title_all {
+            font-size: 60px;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            width: 365px;
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+        button {
+            background-color: darkred;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+        .description {
+            display: none;
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .description_hid {
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <p class="title_all">6 ЗАДАНИЕ</p>
+    <button id="btn">hidden button</button>
+    <div id="square"></div>
+    <button class="description_hid" id="description_hid">Посмотреть описание задания...</button>
+    <p class="description" id="description">Добавить на страницу красный
+        квадрат 50х50 пх, который будет появляться
+        как только человек наводит курсор на кнопку,
+        и скрываться как только человек убирает курсор с кнопки
+    </p>
+    <script>
+        const btn = document.getElementById("btn");
+        const square = document.getElementById("square");
+        btn.addEventListener("mouseover", function() {
+            square.style.display = "block";
+        })
+        btn.addEventListener("mouseout", function() {
+            square.style.display = "none";
+        })
+
+        document.getElementById("description_hid").onclick = function(){
+            const des = document.getElementById("description");
+            if(des.style.display == "none") {
+                des.style.display = "block";
+            }
+            else {
+                des.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

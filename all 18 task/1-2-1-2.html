@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2-1-2</title>
+    <style>
+        #square {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        #all {
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .title_all {
+            font-size: 60px;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            width: 365px;
+        }
+
+        #description {
+            display: none;
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #description_hid {
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+
+        button {
+            background-color: darkred;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    <title>1-2-1-1</title>
+</head>
+<body>
+    <p class="title_all">2 ЗАДАНИЕ</p>
+    <div id="all">
+        <div id="square"></div>
+        <button id="btn">hidden button</button>
+    </div>
+    <button id="description_hid">Посмотреть описание задания...</button>
+    <p id="description">Сделать так, чтоб по клику на кнопку блок исчезал,
+        если он есть, и чтоб появлялся, если он был скрыт (способ CSS+JS)
+    </p>
+    <script>
+        document.getElementById("btn").onclick = function(){
+            const square = document.getElementById("square");
+            if(square.style.display == "none") {
+                square.style.display = "block";
+            }
+            else {
+                square.style.display = "none";
+            }
+        }
+
+        document.getElementById("description_hid").onclick = function(){
+            const des = document.getElementById("description");
+            if(des.style.display == "none") {
+                des.style.display = "block";
+            }
+            else {
+                des.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

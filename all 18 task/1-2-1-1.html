@@ -1,0 +1,113 @@
+<!--Создать на странице div, указать ему id, сделать ему такие стили,
+чтоб он выглядел как черный квадрат 100х100 пх. Добавить на страницу кнопку,
+по клику на эту кнопку блок должен исчезать. Исчезание нужно сделать всеми
+тремя способами (отдельная кнопка под каждый способ):
+
+1) CSS (display: none), т.е. просто навесить стиль на элемент
+2) JS (удаление элемента)
+3) CSS+JS (навешивать на элемент класс hidden,
+а в CSS прописать такие стили чтоб они скрывали всё с классом hidden)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*ALL_SETTINGS*/
+
+        .title_all {
+            font-size: 60px;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            width: 365px;
+        }
+
+        #description {
+            display: none;
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #description_hid {
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button {
+            background-color: darkred;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #square {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin-top: 25px;
+        }
+
+        #all {
+            margin-top: 50px;
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+    </style>
+    <title>1-2-1-1</title>
+</head>
+<body>
+    <p class="title_all">1 ЗАДАНИЕ</p>
+    <div id="all">
+        <div class="group_btn">
+            <button id="btn_1">1 method (CSS)</button>
+            <button id="btn_2">2 method (JS)</button>
+            <button id="btn_3">3 method (CSS + JS)</button>
+        </div>
+        <div id="square"></div>
+    </div>
+        <button id="description_hid">Посмотреть описание задания...</button>
+        <p id="description">Создать на странице div, указать ему id, сделать ему такие стили,
+            чтоб он выглядел как черный квадрат 100х100 пх. Добавить на страницу кнопку,
+            по клику на эту кнопку блок должен исчезать. Исчезание нужно сделать всеми
+            тремя способами (отдельная кнопка под каждый способ):
+                1) CSS (display: none), т.е. просто навесить стиль на элемент
+                2) JS (удаление элемента)
+                3) CSS+JS (навешивать на элемент класс hidden,
+                а в CSS прописать такие стили чтоб они скрывали всё с классом hidden)
+        </p>
+    <script>
+        const square = document.getElementById("square");
+
+        document.getElementById("btn_1").onclick = function(){
+            square.style.display = "none";
+            alert("Для обновления результата обнови страницу!!!");
+        }
+        document.getElementById("btn_2").onclick = function(){
+            document.getElementById("all").removeChild(square);
+            alert("Для обновления результата обнови страницу!!!");
+        }
+        document.getElementById("btn_3").onclick = function(){
+            square.classList.add('hidden');
+            alert("Для обновления результата обнови страницу!!!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!--15 - Сделать два блока, один внутри другого.
+    Навешать на каждый из них слушатель клика,
+    который вызывает алерт. Сделать так чтоб при
+    нажатии на маленький вызывался всего один алерт-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2-1-15</title>
+    <style>
+        #div1{
+            margin-left: auto;
+            margin-right: auto;
+            border: 5px solid  rgb(255, 0, 51);
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div2{
+            border: 5px solid  rgb(0, 0, 0);
+            width: 100px;
+            height: 100px;
+        }
+        .title_all {
+            font-size: 60px;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            width: 380px;
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+        button {
+            background-color: darkred;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+        .description {
+            display: none;
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .description_hid {
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <p class="title_all">15 ЗАДАНИЕ</p>
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+    <button class="description_hid" id="description_hid">Посмотреть описание задания...</button>
+    <p class="description" id="description">Сделать два блока, один внутри другого.
+    Навешать на каждый из них слушатель клика,
+    который вызывает алерт. Сделать так чтоб при
+    нажатии на маленький вызывался всего один алерт
+    </p>
+    <script>
+        const div1 = document.getElementById("div1");
+        const div2 = document.getElementById("div2");
+
+        div1.addEventListener('click', function() {
+            alert("HELLO WORLD...");
+        })
+        div2.addEventListener('click', function() {
+            alert("HELLO WORLD-2...");
+            event.stopPropagation();
+        })
+
+        document.getElementById("description_hid").onclick = function(){
+            const des = document.getElementById("description");
+            if(des.style.display == "none") {
+                des.style.display = "block";
+            }
+            else {
+                des.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

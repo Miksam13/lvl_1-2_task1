@@ -1,0 +1,121 @@
+<!--Добавить на страницу три блока и сделать текст
+    внутри них редактируемым, как в инпуте (но чтоб
+    это был не нативный инпут). То, что человек введет
+    в эти "инпуты" должно в них и оставаться при
+    перезагрузке страницы (onload событие).
+        для первого использовать localStorage
+        для второго использовать cookies
+        для третьего использовать sessionStorage
+    Загуглите в чем разница между этими способами-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2-1-13</title>
+    <style>
+        .inp {
+            width: 200px;
+            background-color: rgb(206, 146, 56);
+            height: 25px;
+            margin-bottom: 20px;
+            border: none;
+        }
+        .all {
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+        }
+        .title_all {
+            font-size: 60px;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            width: 380px;
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+        button {
+            background-color: darkred;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+        .description {
+            display: none;
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .description_hid {
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <p class="title_all">13 ЗАДАНИЕ</p>
+    <div class="all">
+        <div class="inp" id="input_1" contenteditable="true"></div>
+        <input class="inp" id="input_2">
+        <div class="inp" id="input_3" contenteditable="true"></div>
+        <p>It's just that cookies don't work))) Here's a link not a server, where everything is ok</p>
+        <a href="https://miksam1-2-1-13.netlify.app/1-2-1-13">LINK</a>
+    </div>
+    <button class="description_hid" id="description_hid">Посмотреть описание задания...</button>
+    <p class="description" id="description">Добавить на страницу три блока и сделать текст
+        внутри них редактируемым, как в инпуте (но чтоб
+        это был не нативный инпут). То, что человек введет
+        в эти "инпуты" должно в них и оставаться при
+        перезагрузке страницы (onload событие).
+        <br>1) для первого использовать localStorage
+        <br>2) для второго использовать cookies
+        <br>3) для третьего использовать sessionStorage
+        Загуглите в чем разница между этими способами
+    </p>
+    <script>
+        const met_1 = document.getElementById("input_1");
+        const met_2 = document.getElementById("input_2");
+        const met_3 = document.getElementById("input_3");
+       
+        met_1.addEventListener('DOMSubtreeModified', function(){
+            localStorage.setItem('1', met_1.innerHTML);
+        })
+        met_3.addEventListener('DOMSubtreeModified', function(){
+            sessionStorage.setItem('3', met_3.innerHTML);
+        })
+
+        window.addEventListener('load', function() {
+            met_1.innerHTML = localStorage.getItem('1');
+            met_3.innerHTML = sessionStorage.getItem('3');
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+            var name13 = Cookies.get('_username');
+            if (name13) {
+                $('#input-2-13').val(name13);
+            }
+            $('#input-2-13').keydown(function(){
+                var inputName13 = $('#input-2-13').val();
+                Cookies.set('_username', inputName13);
+            })
+        })
+        
+        document.getElementById("description_hid").onclick = function(){
+            const des = document.getElementById("description");
+            if(des.style.display == "none") {
+                des.style.display = "block";
+            }
+            else {
+                des.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

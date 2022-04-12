@@ -1,0 +1,86 @@
+<!--14 - Сделать кнопку, которая появляется
+    когда мы уже пролистали экран вниз и по
+    нажатию на которую человека плавно кидает
+    наверх страницы-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2-1-14</title>
+    <style>
+        .div_all{
+            height: 1000px;
+            background-color: brown;
+        }
+        #but {
+            margin-top: 25px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .title_all {
+            font-size: 60px;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            width: 380px;
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+        button {
+            background-color: darkred;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+        .description {
+            display: none;
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .description_hid {
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <p class="title_all">14 ЗАДАНИЕ</p>
+    <div class="div_all"></div>
+    <button id="but">UP!</button>
+    <button class="description_hid" id="description_hid">Посмотреть описание задания...</button>
+    <p class="description" id="description">Сделать кнопку, которая появляется
+    когда мы уже пролистали экран вниз и по
+    нажатию на которую человека плавно кидает
+    наверх страницы
+    </p>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        (function($) {
+            $(function() {
+	            $('#but').click(function() {
+	            	$('html, body').animate({scrollTop: 0},1000);
+		            return false;
+	            })
+            })
+        })(jQuery)
+
+        document.getElementById("description_hid").onclick = function(){
+            const des = document.getElementById("description");
+            if(des.style.display == "none") {
+                des.style.display = "block";
+            }
+            else {
+                des.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

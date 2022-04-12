@@ -1,0 +1,100 @@
+<!--9 - Превратить инпут в textarea, в которую можно
+    вводить ссылки, каждую с новой строчки. При нажатии
+    на кнопку на странице появится столько картинок,
+    сколько ссылок ввели в textarea
+    (картинки берутся по ссылкам)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2-1-9</title>
+    <style>
+        #textarea {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 365px;
+            display: flex;
+            justify-content: center;
+        }
+        #btn {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 15px;
+        }
+        #all_img {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+            width: 365px;
+        }
+        .title_all {
+            font-size: 60px;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            width: 365px;
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+        button {
+            background-color: darkred;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+        .description {
+            display: none;
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .description_hid {
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }  
+    </style>
+</head>
+<body>
+    <p class="title_all">9 ЗАДАНИЕ</p>
+    <textarea rows="6" id="textarea"></textarea>
+    <button id="btn">open URL image</button>
+    <div id="all_img"></div>
+    <button class="description_hid" id="description_hid">Посмотреть описание задания...</button>
+    <p class="description" id="description">Превратить инпут в textarea, в которую можно
+        вводить ссылки, каждую с новой строчки. При нажатии
+        на кнопку на странице появится столько картинок,
+        сколько ссылок ввели в textarea
+        (картинки берутся по ссылкам)
+    </p>
+    <script>
+        document.getElementById("btn").onclick = function(){
+            const url_text = document.getElementById("textarea").value;
+            let str = url_text.split('\n');
+            for(let i = 0; i < str.length; i++){
+                let el_img = document.createElement("img");
+                el_img.setAttribute("src", str[i]);
+                let all_div = document.getElementById("all_img");
+                document.body.insertBefore(el_img, all_div);
+            }
+        }
+
+        document.getElementById("description_hid").onclick = function(){
+            const des = document.getElementById("description");
+            if(des.style.display == "none") {
+                des.style.display = "block";
+            }
+            else {
+                des.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

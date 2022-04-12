@@ -1,0 +1,75 @@
+<!--17 - Дано: <form><input type="submit"
+    value="GO"></form>Сделать так чтоб при нажатии
+    на кнопку "GO" не перезагружалась страница-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2-1-17</title>
+    <style>
+        #submit {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .title_all {
+            font-size: 60px;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            width: 380px;
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+        button {
+            background-color: darkred;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+        .description {
+            display: none;
+            width: 365px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .description_hid {
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <p class="title_all">17 ЗАДАНИЕ</p>
+    <form>
+        <input type="submit" id="submit" value="GO">
+    </form>
+    <button class="description_hid" id="description_hid">Посмотреть описание задания...</button>
+    <p class="description" id="description">Дано: &ltform&gt&ltinput type="submit"
+    value="GO"&gt&lt/form&gtСделать так чтоб при нажатии
+    на кнопку "GO" не перезагружалась страница
+    </p>
+    <script>
+        const inp = document.getElementById("submit")
+        inp.addEventListener('click', function(e) {
+            e.preventDefault()
+        })
+
+        document.getElementById("description_hid").onclick = function(){
+            const des = document.getElementById("description");
+            if(des.style.display == "none") {
+                des.style.display = "block";
+            }
+            else {
+                des.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
